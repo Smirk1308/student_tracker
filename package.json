@@ -1,0 +1,13 @@
+{
+  "name": "syllabus-wallah",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend && npm run build --workspace backend",
+    "test": "npm run test --workspace frontend",
+    "check": "npm run check --workspace frontend && npm run check --workspace backend && npm run check:layers",
+    "check:layers": "node scripts/check-layers.mjs"
+  }
+}
