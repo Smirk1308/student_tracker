@@ -7,4 +7,5 @@
 - T04 complete — one-click exam rush shows revised countdown, impact, unfinished-topic priorities, restore, and undo; browser acceptance passed.
 - Baseline fixed — typed `Magnetic` with Framer Motion button props and added 13 deterministic core tests; check, tests, and build pass.
 - T05 complete — cinematic scroll-led home with original flight-path visual, live syllabus overview, next-exam cards, and one-click route to the tracker; browser review and all checks passed.
+- Palette update complete — switched the home and tracker to warm ivory, forest green, sage, and white surfaces based on the reference; check, 13 tests, and build pass.
 - Tier 3 remains deferred by product decision.
