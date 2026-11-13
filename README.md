@@ -50,6 +50,13 @@ flowchart TD
 
 ---
 
+## 📹 Video Walkthrough & Demo
+
+A full video demonstration of the application, showing topic management, live progress tracking, and the exam rush simulation is stored in the repository:
+- **Demo Video**: [`demo video/syllabus_wallah_videodemo.mp4`](demo%20video/syllabus_wallah_videodemo.mp4) *(Tracked with Git LFS)*
+
+---
+
 ## ⚡ 3-Step Demo Path for Judges
 
 1. **Step 1: Create a Subject & Topic Runway**

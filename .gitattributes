@@ -1,0 +1,2 @@
+demo[[:space:]]video/* filter=lfs diff=lfs merge=lfs -text
+demo[[:space:]]video/** filter=lfs diff=lfs merge=lfs -text
