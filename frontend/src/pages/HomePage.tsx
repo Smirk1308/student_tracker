@@ -20,7 +20,10 @@ export function HomePage() {
       <div className="pointer-events-none absolute left-1/2 top-[42%] h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#42765c]/15 shadow-[0_0_100px_rgba(55,108,75,.08)] sm:h-[42rem] sm:w-[42rem]" aria-hidden="true" />
       <div className="pointer-events-none absolute bottom-12 left-1/2 z-0 w-full max-w-2xl -translate-x-1/2 opacity-70" aria-hidden="true"><RunwayScene /></div>
       <div className="relative z-10 mx-auto w-full max-w-5xl">
-        <p className="mb-7 text-xs font-semibold uppercase tracking-[.32em] text-[#26704d] sm:text-sm">Your syllabus, cleared for takeoff</p>
+        <div className="mx-auto mb-6 h-20 w-20 overflow-hidden rounded-full border-2 border-[#176543]/25 bg-white shadow-md sm:h-24 sm:w-24">
+          <video src="/assets/logo.mp4" autoPlay loop muted playsInline className="h-full w-full object-cover" aria-label="Syllabus Wallah fluid logo" />
+        </div>
+        <p className="mb-6 text-xs font-semibold uppercase tracking-[.32em] text-[#26704d] sm:text-sm">Your syllabus, cleared for takeoff</p>
         <Reveal><h1 className="font-heading text-5xl font-semibold leading-[.98] tracking-[-.045em] text-[#17392b] sm:text-7xl md:text-8xl">Every topic.<br /><span className="text-[#317650]">One clear landing.</span></h1></Reveal>
         <p className="mx-auto mt-6 max-w-2xl text-base text-[#52675b] sm:text-xl">syllabus ka scene ab ekdam clean</p>
         <Link className="mt-5 inline-flex min-h-14 items-center gap-4 rounded-full bg-[#176543] px-7 font-semibold text-white shadow-[0_10px_40px_rgba(25,100,65,.2)] transition-transform hover:scale-[1.03] focus-visible:outline-[#176543]" to="/subjects">Begin your study plan <span aria-hidden="true">↗</span></Link>
