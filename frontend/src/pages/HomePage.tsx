@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { daysLeft, progressPercent } from "../core";
 import { useAppStore } from "../store";
 import { ProgressTrack, Reveal, RunwayScene, ScrollSection } from "../ui";
+import { JudgePath } from "../components/JudgePath";
 
 export function HomePage() {
   const subjects = useAppStore((state) => state.subjects);
@@ -12,6 +13,7 @@ export function HomePage() {
   const next = subjects.filter((subject) => daysLeft(subject.examDate, today) >= 1).sort((a, b) => a.examDate.localeCompare(b.examDate))[0];
   const topics = subjects.flatMap((subject) => subject.topics);
   const complete = topics.filter((topic) => topic.done).length;
+  const rushed = subjects.some((subject) => subject.originalExamDate !== null);
   return <main className="overflow-hidden bg-[#f6f7f3] text-[#18372b]">
     <section className="relative flex min-h-[calc(100svh-76px)] flex-col items-center justify-center overflow-hidden px-5 py-14 text-center sm:px-10">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_52%_35%,rgba(187,215,190,.76),transparent_52%),radial-gradient(ellipse_at_8%_90%,rgba(229,237,222,.9),transparent_42%),linear-gradient(145deg,#f7f8f4_15%,#e9f0e8_58%,#f7f8f4)]" aria-hidden="true" />
@@ -26,6 +28,10 @@ export function HomePage() {
       </div>
       <div className="pointer-events-none absolute -bottom-24 -left-16 h-52 w-[120%] rotate-[-5deg] rounded-[50%] border-t border-[#558467]/25 bg-gradient-to-t from-[#dce9dc]/55 to-transparent" aria-hidden="true" />
     </section>
+
+    <div className="mx-auto max-w-6xl px-5 pt-10 md:px-10">
+      <JudgePath done={[topics.length > 0, complete > 0, rushed]} />
+    </div>
 
     <ScrollSection label="Mission overview"><section className="mx-auto grid max-w-6xl gap-8 px-5 py-20 md:grid-cols-[.8fr_1.2fr] md:items-center md:px-10">
       <div><p className="text-xs uppercase tracking-[.28em] text-[#26704d]">Mission control</p><h2 className="mt-4 text-4xl font-semibold text-[#17392b] sm:text-5xl">Know the distance.<br />Own the landing.</h2><p className="mt-5 max-w-lg leading-7 text-[#52675b]">Break your syllabus into topics, watch progress take shape, and adjust your flight path when an exam moves closer.</p><Link className="mt-6 inline-flex min-h-12 items-center rounded-full border border-[#aabaae] px-5 hover:bg-white/70" to="/subjects">Open mission control <span className="ml-3" aria-hidden="true">→</span></Link></div>

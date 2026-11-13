@@ -8,4 +8,5 @@
 - Baseline fixed — typed `Magnetic` with Framer Motion button props and added 13 deterministic core tests; check, tests, and build pass.
 - T05 complete — cinematic scroll-led home with original flight-path visual, live syllabus overview, next-exam cards, and one-click route to the tracker; browser review and all checks passed.
 - Palette update complete — switched the home and tracker to warm ivory, forest green, sage, and white surfaces based on the reference; check, 13 tests, and build pass.
+- Handover complete — backend workspace dependencies installed, resilient Supabase API and Express server scaffolded; UI polished across SubjectForm, TopicForm, TopicRow, ImpactPanel, PriorityList, Countdown, ProgressBar, and EmptyState; JudgePath evaluation checklist mounted to home route; CSP headers updated in vercel.json; full monorepo check (frontend, backend, layers), 13 tests, and production build pass.
 - Tier 3 remains deferred by product decision.
